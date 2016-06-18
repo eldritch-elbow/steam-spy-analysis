@@ -61,6 +61,7 @@ def get_steamspy_records():
 
 	with open('output/steamspy_out.csv', 'wb') as csvfile:
 		spamwriter = csv.writer(csvfile, quoting=csv.QUOTE_NONNUMERIC)
+		spamwriter.writerow(['appid','name','players_forever','avg_playtime_forever'])		
 		for app_id in resp_data:
 			record = resp_data[app_id]
 			spamwriter.writerow([record['appid'], record['name'], record['players_forever'], record['average_forever']])		
