@@ -41,9 +41,9 @@ e. Install the library:
 See extract.py for code.
 
 Uses the following:
--[steamapi](https://github.com/smiley/steamapi) library
--[SteamSpy API](http://steamspy.com/api.php)
--[requests](http://docs.python-requests.org/en/latest/) library
+- [steamapi](https://github.com/smiley/steamapi) library
+- [SteamSpy API](http://steamspy.com/api.php)
+- [requests](http://docs.python-requests.org/en/latest/) library
 
 # 6. Analyze / plot data
 

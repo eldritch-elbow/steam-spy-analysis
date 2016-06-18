@@ -3,6 +3,7 @@
 import steamapi
 import inspect
 import requests
+import csv
 
 def get_my_games(  ):
 
@@ -58,8 +59,11 @@ def get_steamspy_records():
 	print r.encoding
 	resp_data = r.json()
 
-	for app_id in resp_data:
-		print resp_data[app_id]['publisher']
+	with open('output/steamspy_out.csv', 'wb') as csvfile:
+		spamwriter = csv.writer(csvfile, quoting=csv.QUOTE_NONNUMERIC)
+		for app_id in resp_data:
+			record = resp_data[app_id]
+			spamwriter.writerow([record['appid'], record['name'], record['players_forever'], record['average_forever']])		
 
 get_steamspy_records()
 
