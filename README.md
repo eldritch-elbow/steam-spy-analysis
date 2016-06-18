@@ -5,11 +5,15 @@
 <http://steamcommunity.com/dev/apikey>
 
 # 2. Get your steam account ID:
+
 Public name:    JimmyJazz
+
 URL:            <http://steamcommunity.com/profiles/76561197970347865/home/>
+
 Steam ID:       76561197970347865
 
 # 3. Retrieve list of games
+
 <http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=API_KEY_GOES_HERE&steamid=76561197970347865&format=json>
 
 Games owned = 172 
@@ -35,6 +39,7 @@ e. Install the library:
 # 5. Retrieve list of games, achievements, etc
 
 See extract.py for code.
+
 Uses [steamapi](https://github.com/smiley/steamapi) library and [SteamSpy API](http://steamspy.com/api.php) to retrieve data.
 
 # 6. Analyze / plot data
