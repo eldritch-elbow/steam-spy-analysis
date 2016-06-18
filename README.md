@@ -40,9 +40,19 @@ e. Install the library:
 
 See extract.py for code.
 
-Uses [steamapi](https://github.com/smiley/steamapi) library and [SteamSpy API](http://steamspy.com/api.php) to retrieve data.
+Uses the following:
+-[steamapi](https://github.com/smiley/steamapi) library
+-[SteamSpy API](http://steamspy.com/api.php)
+-[requests](http://docs.python-requests.org/en/latest/) library
 
 # 6. Analyze / plot data
+
+See analyse.R for code
+
+Uses output of extract.py to generate exploratory visualizations.
+
+
+
 
 
 
