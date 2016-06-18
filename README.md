@@ -1,9 +1,8 @@
 # Basic requirements:
 * Python 2.7 - such as Mac OS X default version
 
-# 1. Get API key
+# 1. Get an API key
 <http://steamcommunity.com/dev/apikey>
-1DFEE0F6034695D0833027EAC609F84F
 
 # 2. Get your steam account ID:
 Public name:    JimmyJazz
@@ -11,7 +10,7 @@ URL:            <http://steamcommunity.com/profiles/76561197970347865/home/>
 Steam ID:       76561197970347865
 
 # 3. Retrieve list of games
-<http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=1DFEE0F6034695D0833027EAC609F84F&steamid=76561197970347865&format=json>
+<http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=API_KEY_GOES_HERE&steamid=76561197970347865&format=json>
 
 Games owned = 172 
 
