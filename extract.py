@@ -53,18 +53,26 @@ def get_my_games(  ):
 
 def get_steamspy_records():
 
-	r = requests.get('http://steamspy.com/api.php?request=top100forever')
+	r = requests.get('http://steamspy.com/api.php?request=all')
 	print r.status_code
 	print r.headers['content-type']
 	print r.encoding
 	resp_data = r.json()
 
 	with open('output/steamspy_out.csv', 'wb') as csvfile:
-		spamwriter = csv.writer(csvfile, quoting=csv.QUOTE_NONNUMERIC)
-		spamwriter.writerow(['appid','name','players_forever','avg_playtime_forever'])		
+		writer = csv.writer(csvfile, quoting=csv.QUOTE_NONNUMERIC)
+		writer.writerow(['appid','name','publisher','score_rank','owners','players_forever','avg_playtime_forever'])		
 		for app_id in resp_data:
 			record = resp_data[app_id]
-			spamwriter.writerow([record['appid'], record['name'], record['players_forever'], record['average_forever']])		
+
+			writer.writerow(
+				[record['appid'], 
+				 record['name'].encode('UTF-8'), 
+				 record['publisher'].encode('UTF-8') if record['publisher'] else "", 
+				 record['score_rank'], 				 
+				 record['owners'], 				 
+				 record['players_forever'], 
+				 record['average_forever']])		
 
 get_steamspy_records()
 
